@@ -1624,6 +1624,172 @@ input[type="range"] {
   color: var(--primary-soft);
 }
 
+@media (max-width: 720px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .site-header .container {
+    width: calc(100% - 28px);
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand-text {
+    max-width: 190px;
+    line-height: 1.2;
+  }
+
+  .hero-grid,
+  .calculator-wrap,
+  .about-grid,
+  .faq-wrap,
+  .cta-box,
+  .legal-grid,
+  .legal-info-wrap,
+  .field-row,
+  .calculator-results,
+  .trust-grid,
+  .four-col,
+  .three-col,
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 56px 0 48px;
+  }
+
+  .section,
+  .privacy-page {
+    padding: 60px 0;
+  }
+
+  h1 {
+    font-size: clamp(2.6rem, 12vw, 4rem);
+    overflow-wrap: anywhere;
+  }
+
+  h2 {
+    font-size: clamp(2.1rem, 10vw, 3rem);
+    overflow-wrap: anywhere;
+  }
+
+  .hero-actions,
+  .hero-actions .btn,
+  .contact-form .btn-primary {
+    width: 100%;
+  }
+
+  .hero-card {
+    border-radius: 20px;
+  }
+
+  .image-upload {
+    min-height: 300px;
+  }
+
+  .trust-grid,
+  .calculator-panel,
+  .privacy-content {
+    padding: 22px 18px;
+  }
+
+  .cta-box {
+    padding: 24px 18px;
+    gap: 26px;
+  }
+
+  .cta-box h2 {
+    max-width: none;
+  }
+
+  .form-step {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+
+  .quick-contact-row {
+    grid-template-columns: 82px minmax(0, 1fr);
+  }
+
+  .quick-contact-row > :last-child {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .legal-card,
+  .feature-card,
+  .step-card,
+  .testimonial-card {
+    padding: 22px 18px;
+  }
+
+  .legal-info-wrap {
+    gap: 12px;
+  }
+
+  .footer-wrap,
+  .footer-links,
+  .footer-contact {
+    align-items: flex-start;
+  }
+
+  .footer-links,
+  .footer-contact {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cookie-inner {
+    padding: 16px 0;
+  }
+
+  .cookie-controls,
+  .cookie-actions {
+    justify-content: flex-start;
+  }
+
+  .cookie-actions .btn {
+    flex: 1 1 140px;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-text {
+    max-width: 150px;
+    font-size: 0.86rem;
+  }
+
+  .nav-wrap {
+    min-height: 70px;
+  }
+
+  .hero-points {
+    display: grid;
+    gap: 8px;
+  }
+
+  .calculator-tabs {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-tab {
+    width: 100%;
+  }
+
+  .privacy-content {
+    padding: 20px 16px;
+  }
+}
+
 .quick-contact-row a {
   color: white;
 }
