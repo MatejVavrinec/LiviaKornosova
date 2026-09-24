@@ -273,6 +273,56 @@ p {
   box-shadow: var(--shadow);
 }
 
+.hero-image-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.image-upload {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+  padding: 32px;
+  overflow: hidden;
+  color: var(--text);
+  text-align: center;
+  cursor: pointer;
+  background: linear-gradient(135deg, rgba(36, 52, 69, 0.9), rgba(11, 18, 27, 0.98));
+}
+
+.image-upload input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.image-upload-content {
+  display: grid;
+  gap: 8px;
+  max-width: 260px;
+}
+
+.image-upload-content strong {
+  color: var(--primary-soft);
+  font-size: 1.1rem;
+}
+
+.image-upload-content span {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.image-upload img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .card-badge {
   display: inline-flex;
   background: rgba(217, 180, 106, 0.12);
