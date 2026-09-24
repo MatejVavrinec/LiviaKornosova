@@ -323,6 +323,10 @@ p {
   object-fit: cover;
 }
 
+.image-upload img[hidden] {
+  display: none;
+}
+
 .card-badge {
   display: inline-flex;
   background: rgba(217, 180, 106, 0.12);
