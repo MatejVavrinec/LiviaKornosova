@@ -1,19 +1,5 @@
 const navToggle = document.querySelector('.nav-toggle');
 const mainNav = document.querySelector('.main-nav');
-const heroImageInput = document.getElementById('heroImageInput');
-const heroImagePreview = document.getElementById('heroImagePreview');
-const imageUploadContent = document.querySelector('.image-upload-content');
-
-if (heroImageInput && heroImagePreview && imageUploadContent) {
-  heroImageInput.addEventListener('change', () => {
-    const [file] = heroImageInput.files;
-    if (!file || !file.type.startsWith('image/')) return;
-
-    heroImagePreview.src = URL.createObjectURL(file);
-    heroImagePreview.hidden = false;
-    imageUploadContent.hidden = true;
-  });
-}
 
 if (navToggle && mainNav) {
   navToggle.addEventListener('click', () => {

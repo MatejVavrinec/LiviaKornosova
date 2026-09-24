@@ -57,7 +57,17 @@ function readRequestBody(request) {
 }
 
 function serveStatic(request, response, pathname) {
-  const requestedPath = pathname === '/' ? '/index.html' : pathname;
+  let decodedPath;
+
+  try {
+    decodedPath = decodeURIComponent(pathname);
+  } catch (error) {
+    response.writeHead(400, { 'Content-Type': 'text/plain; charset=utf-8' });
+    response.end('Invalid URL path');
+    return;
+  }
+
+  const requestedPath = decodedPath === '/' ? '/index.html' : decodedPath;
   const filePath = path.resolve(ROOT, `.${requestedPath}`);
 
   if (!filePath.startsWith(ROOT) || !fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) {

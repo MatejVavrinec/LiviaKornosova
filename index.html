@@ -43,8 +43,6 @@
       </div>
     </header>
 
-    <button type="button" class="admin-toggle" id="adminToggle" aria-label="Admin prístup">A</button>
-
     <main id="top">
       <section class="hero">
         <div class="container hero-grid">
@@ -65,14 +63,7 @@
           </div>
 
           <div class="hero-card hero-image-card">
-            <label class="image-upload" for="heroImageInput">
-              <input id="heroImageInput" type="file" accept="image/*">
-              <img id="heroImagePreview" alt="Náhľad vybraného obrázka" hidden>
-              <span class="image-upload-content">
-                <strong>Pridajte obrázok</strong>
-                <span>Vyberte fotografiu, ktorú chcete zobraziť v tejto časti.</span>
-              </span>
-            </label>
+            <img class="hero-image" src="IMG-20260913-WA0000 (1).jpg" alt="Finančné riešenia pre bývanie, ochranu a investície">
           </div>
         </div>
       </section>
@@ -443,64 +434,6 @@
         </div>
       </section>
 
-      <div id="adminOverlay" class="admin-overlay hidden">
-        <div class="admin-modal" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
-          <button type="button" class="admin-close" id="adminClose" aria-label="Zavrieť">×</button>
-
-          <div id="adminLoginBlock">
-            <h3 id="adminTitle">Admin prístup</h3>
-            <form id="adminLoginForm" class="admin-form">
-              <label>
-                Heslo
-                <input type="password" id="adminPassword" placeholder="Zadajte heslo" required />
-              </label>
-              <button type="submit" class="btn btn-primary">Prihlásiť sa</button>
-            </form>
-          </div>
-
-          <div id="adminPanel" class="hidden">
-            <div class="admin-header-row">
-              <h3>Správa blogu</h3>
-              <button type="button" id="logoutAdmin" class="btn btn-secondary">Odhlásiť</button>
-            </div>
-
-            <form id="blogForm" class="admin-form admin-form-grid">
-              <input type="hidden" id="postId" />
-
-              <label>
-                Názov článku
-                <input type="text" id="postTitle" placeholder="Napíšte názov článku" required />
-              </label>
-
-              <label>
-                Kategória
-                <input type="text" id="postCategory" placeholder="Hypotéky, poistenie, investície" required />
-              </label>
-
-              <label class="full-width">
-                Krátky popis
-                <textarea id="postExcerpt" rows="2" placeholder="Krátky úvod do článku" required></textarea>
-              </label>
-
-              <label class="full-width">
-                Obsah článku
-                <textarea id="postContent" rows="8" placeholder="Celý text článku" required></textarea>
-              </label>
-
-              <div class="form-actions full-width">
-                <button type="submit" class="btn btn-primary" id="savePostBtn">Uložiť článok</button>
-                <button type="button" class="btn btn-secondary" id="resetPostForm">Vymazať formulár</button>
-              </div>
-            </form>
-
-            <div class="admin-list-wrap">
-              <h4>Existujúce články</h4>
-              <div id="adminPostList" class="admin-post-list"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div id="articleModal" class="article-modal hidden" role="dialog" aria-modal="true" aria-labelledby="articleModalTitle">
         <div class="article-modal-content">
           <button type="button" class="article-close" id="articleClose" aria-label="Zavrieť článok">×</button>
@@ -792,24 +725,6 @@
         </div>
       </div>
 
-      <div class="container legal-info-wrap">
-        <div class="legal-info-block">
-          <h4>Registračné údaje NBS</h4>
-          <p>Pridať konkrétne údaje o registrácii a oprávnení.</p>
-        </div>
-        <div class="legal-info-block">
-          <h4>Identifikačné údaje</h4>
-          <p>Pridať názov spoločnosti, sídlo, IČO, DIČ a kontaktné údaje.</p>
-        </div>
-        <div class="legal-info-block">
-          <h4>Ochrana osobných údajov (GDPR)</h4>
-          <p>Pridať informácie o spracúvaní osobných údajov a kontaktoch.</p>
-        </div>
-        <div class="legal-info-block">
-          <h4>Reklamačný poriadok</h4>
-          <p>Pridať podrobnosti o reklamných zásadách a pravidlách spolupráce.</p>
-        </div>
-      </div>
     </footer>
 
     <div id="cookieBanner" class="cookie-banner hidden" aria-live="polite" aria-label="Cookies nastavenia">
